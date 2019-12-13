@@ -22,8 +22,8 @@ mkdir -p ${DIRETORIO_BACKUP}
 #
 # Testa a conexão com os NAS da Lenovo
 #
-USER_RSYNC=rsync
-export RSYNC_PASSWORD=87651234
+USER_RSYNC=XXXXXX
+export RSYNC_PASSWORD=XXXXXX
 rsync -a /var/backupNAS/testersync.txt rsync://${USER_RSYNC}@${IP_NAS}:${PORTA_NAS}/zona${ZONA} 2> /dev/null
 if [ $? -eq 0 ]
 then
@@ -33,8 +33,8 @@ else
     #
     # Testa a conexão com os NAS da WD
     #
-    USER_RSYNC=root
-    export RSYNC_PASSWORD=ODc2NTEyMzQ=
+    USER_RSYNC=XXXXX
+    export RSYNC_PASSWORD=XXXXXX
     rsync -a /var/backupNAS/testersync.txt rsync://${USER_RSYNC}@${IP_NAS}:${PORTA_NAS}/zona${ZONA}
     if [ $? -eq 0 ]
     then
